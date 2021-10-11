@@ -7,6 +7,10 @@
 
 // ***
 
+const solution = (s, e) => s.endsWith(e)
+
+//OR
+
 const solution = (s, e) => s.substr(-e.length) == e || e == ''
 
 //OR
