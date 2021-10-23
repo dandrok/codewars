@@ -14,3 +14,5 @@
 // ANSWER:
 
 const howManySmaller = (a, n) => a.filter((u) => +u.toFixed(2) < n).length
+
+x
