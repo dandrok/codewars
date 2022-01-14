@@ -10,3 +10,8 @@ solution('abc', 'd') // returns false
 export const solution = (str: string, end: string): boolean => {
   return str.slice(str.length - end.length) === end
 }
+
+//OR
+
+export const solution2 = (str: string, end: string): boolean =>
+  str.endsWith(end)
