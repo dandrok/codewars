@@ -30,3 +30,17 @@ export function getDrinkByProfession(profession: string): string {
     ? 'Cristal'
     : 'Beer'
 }
+
+// OR
+
+const drinks = {
+  jabroni: 'Patron Tequila',
+  'school counselor': 'Anything with Alcohol',
+  programmer: 'Hipster Craft Beer',
+  'bike gang member': 'Moonshine',
+  politician: 'Your tax dollars',
+  rapper: 'Cristal',
+}
+
+export const getDrinkByProfession2 = (profession: string): string =>
+  drinks[profession.toLowerCase()] || 'Beer'
