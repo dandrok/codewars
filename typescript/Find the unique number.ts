@@ -12,3 +12,9 @@ export const findUniq = (arr: number[]): number => {
   let noUniq = +[...new Set(arr.filter((e, i, a) => a.indexOf(e) !== i))]
   return +arr.filter((val) => val !== noUniq)
 }
+
+export function findUniq2(arr: Array<number>): number {
+  arr = arr.sort((a, b) => a - b)
+  let uniq = arr[0] == arr[1] ? arr[arr.length - 1] : arr[0]
+  return uniq
+}
