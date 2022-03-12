@@ -12,11 +12,19 @@ Examples
 
 const whatCentury = (year) => {
   const split = year.match(/.{2}/g)
-  const solution = split[1] == 0 ? +split[0] : +split[0] + 1
-  const j = solution % 10
-  const k = solution % 100
-  if (j == 1 && k != 11) return solution + 'st'
-  if (j == 2 && k != 12) return solution + 'nd'
-  if (j == 3 && k != 13) return solution + 'rd'
-  return solution + 'th'
+  const century = split[1] == 0 ? +split[0] : +split[0] + 1
+  const j = century % 10
+  const k = century % 100
+  if (j == 1 && k != 11) return century + 'st'
+  if (j == 2 && k != 12) return century + 'nd'
+  if (j == 3 && k != 13) return century + 'rd'
+  return century + 'th'
+}
+
+const whatCentury2 = (year) => {
+  const century = Math.ceil(year / 100)
+  return (
+    century +
+    (century < 20 ? 'th' : ['th', 'st', 'nd', 'rd'][century % 10] || 'th')
+  )
 }
