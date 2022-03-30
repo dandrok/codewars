@@ -11,3 +11,9 @@ export class Kata {
     )
   }
 }
+
+export class Kata2 {
+  static findLongest(array: number[]): number {
+    return array.slice().sort((a, b) => String(b).length - String(a).length)[0]
+  }
+}
