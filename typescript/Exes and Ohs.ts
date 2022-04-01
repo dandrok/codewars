@@ -16,3 +16,9 @@ export const xo = (str: string): boolean => {
   let x = str.split('x').length - 1
   return o === x
 }
+export const xo2 = (str: string): boolean => {
+  str = str.toLowerCase()
+  const X = [...str].filter((letter) => letter === 'x').length
+  const O = [...str].filter((letter) => letter === 'o').length
+  return X == O
+}
