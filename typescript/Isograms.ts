@@ -10,3 +10,8 @@ Example: (Input --> Output)
 
 export const isIsogram = (str: string): boolean =>
   str.length === new Set(str.toLowerCase()).size
+
+export function isIsogram2(str: string): boolean {
+  str = str.toLowerCase()
+  return [...new Set(str)].length == str.length
+}
