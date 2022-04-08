@@ -22,3 +22,7 @@ Explanation:
 
 export const minValue = (values: number[]): number =>
   +[...new Set(values)].sort().join('')
+
+export const minValue2 = (values: number[]): number => {
+  return Number([...new Set(values)].sort((a, b) => a - b).join(''))
+}
