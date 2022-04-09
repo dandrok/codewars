@@ -43,3 +43,10 @@ export const menFromBoys = (arr: number[]): number[] => [
       .concat(arr.filter((a) => a % 2).sort((a, b) => b - a))
   ),
 ]
+
+export const menFromBoys2 = (arr: number[]): number[] => {
+  arr = [...new Set(arr)]
+  const evenNumber = arr.filter((num) => num % 2 === 0).sort((a, b) => a - b)
+  const oddNumber = arr.filter((num) => num % 2 !== 0).sort((a, b) => b - a)
+  return evenNumber.concat(oddNumber)
+}
