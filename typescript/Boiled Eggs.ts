@@ -18,3 +18,7 @@ Example (Input --> Output)
 export function cookingTime(eggs: number): number {
   return Math.ceil(eggs / 8) * 5
 }
+
+export function cookingTime2(eggs: number): number {
+  return eggs > 0 ? Math.ceil(eggs / 8) * 5 : 0
+}
