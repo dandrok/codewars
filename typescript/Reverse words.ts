@@ -11,3 +11,7 @@ export const reverseWords = (str: string): string =>
     .split(' ')
     .map((a) => [...a].reverse().join(''))
     .join(' ')
+
+export const reverseWords2 = (str: string): string => {
+  return [...str].reverse().join('').split(' ').reverse().join(' ')
+}
