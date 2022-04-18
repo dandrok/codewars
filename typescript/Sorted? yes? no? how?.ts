@@ -13,3 +13,11 @@ export const isSortedAndHow = (array: number[]): string =>
     : String([...array].sort((a, b) => b - a)) === String(array)
     ? 'yes, descending'
     : 'no'
+
+export function isSortedAndHow2(arr: number[]): string {
+  return arr.every((x, i) => i == 0 || arr[i] >= arr[i - 1])
+    ? 'yes, ascending'
+    : arr.every((x, i) => i == 0 || arr[i] <= arr[i - 1])
+    ? 'yes, descending'
+    : 'no'
+}
