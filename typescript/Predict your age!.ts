@@ -19,3 +19,22 @@ export const predictAge = (...age: number[]): number =>
   Math.floor(
     Math.sqrt(age.map((a) => a * a).reduce((prev, curr) => prev + curr, 0)) / 2
   )
+
+export function predictAge2(
+  age1: number,
+  age2: number,
+  age3: number,
+  age4: number,
+  age5: number,
+  age6: number,
+  age7: number,
+  age8: number
+): number {
+  return Math.floor(
+    Math.sqrt(
+      [age1, age2, age3, age4, age5, age6, age7, age8]
+        .map((a) => a * a)
+        .reduce((a, b) => a + b, 0)
+    ) / 2
+  )
+}
