@@ -14,3 +14,9 @@ export const accum = (s: string): string => {
     .map((el, i) => el.charAt(0).toUpperCase() + el.toLowerCase().repeat(i))
     .join('-')
 }
+
+export const accum2 = (s: string): string => {
+  return [...s.toLowerCase()]
+    .map((l, i) => l.toUpperCase() + l.repeat(i))
+    .join('-')
+}
