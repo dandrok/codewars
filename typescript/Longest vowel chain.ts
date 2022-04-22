@@ -10,3 +10,7 @@ export const solve = (s: string) => {
     .map((v) => v.length)
     .sort((a, b) => b - a)[0]
 }
+
+export const solve2 = (s: string) => {
+  return Math.max(...s.split(/[^aiueo]/).map((x) => x.length))
+}
