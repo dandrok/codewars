@@ -12,3 +12,6 @@ Examples
  */
 
 export const stringToNumber = (str: string): number => Number(str)
+export const stringToNumber1 = (str: string): number => parseInt(str)
+export const stringToNumber2 = (str: string): number => parseFloat(str)
+export const stringToNumber3 = (str: string): number => +str
