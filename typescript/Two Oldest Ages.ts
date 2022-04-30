@@ -15,3 +15,14 @@ export const twoOldestAges2 = (ages: number[]): number[] => {
   ages = ages.sort((a, b) => a - b)
   return ages.length <= 2 ? ages : ages.splice(ages.length - 2, ages.length - 1)
 }
+
+export const twoOldestAges3 = (ages: number[]): number[] => {
+  return ages.sort((a, b) => a - b).slice(ages.length - 2)
+}
+
+export const twoOldestAges4 = (ages: number[]): number[] => {
+  return ages
+    .sort((a, b) => b - a)
+    .slice(0, 2)
+    .reverse()
+}
