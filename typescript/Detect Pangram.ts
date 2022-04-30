@@ -11,3 +11,6 @@ export const isPangram = (phrase: string): boolean =>
       .replace(/[^a-z]/gi, '')
       .split('')
   ).size >= 26
+
+export const isPangram2 = (phrase: string): boolean =>
+  new Set(phrase.match(/([a-z])(?!.*\1)/gi)).size === 26
