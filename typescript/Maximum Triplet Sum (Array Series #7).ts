@@ -36,3 +36,9 @@ export const maxTriSum = (nums: number[]): number =>
     .sort((a, b) => b - a)
     .splice(0, 3)
     .reduce((z, y) => z + y, 0)
+
+export function maxTriSum2(nums: number[]): number {
+  return [...new Set(nums.sort((a, b) => b - a))]
+    .slice(0, 3)
+    .reduce((a, b) => a + b, 0)
+}
