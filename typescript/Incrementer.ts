@@ -16,3 +16,10 @@ Examples:
 export const incrementer = (nums: number[]) => {
   return nums.map((el, i) => (el + i + 1) % 10)
 }
+
+export const incrementer2 = (nums: number[]) => {
+  return nums.map((el, i) => {
+    const inc = String(el + i + 1)
+    return inc.length > 1 ? Number(inc[1]) : Number(inc)
+  })
+}
