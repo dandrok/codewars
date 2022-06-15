@@ -10,3 +10,8 @@ Examples:(Input1, Input2 --> Output (explanation)))
  */
 
 const addBinary = (a, b) => (a + b).toString(2)
+
+const addBinary1 = (a, b) => {
+  const sum = a + b
+  return sum.toString(2)
+}
