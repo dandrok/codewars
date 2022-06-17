@@ -1,0 +1,1 @@
+const testFunction = () => 2 * 2
