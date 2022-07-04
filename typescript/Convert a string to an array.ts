@@ -7,6 +7,4 @@ Examples (Input ==> Output):
 "I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
  */
 
-export function stringToArray(s: string): string[] {
-  return s.split(' ')
-}
+export const stringToArray = (s: string): string[] => s.split(' ')
