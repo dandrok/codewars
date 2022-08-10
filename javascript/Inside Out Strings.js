@@ -8,24 +8,18 @@ An example should clarify:
 'taxi' would become 'atix' 'taxis' would become 'atxsi'
  */
 
+const mapping = (l) => {
+  return l.map((el) => {
+    const half = Math.floor(el.length / 2)
+    const checkForMiddle = el.length % 2 === 0 || el.length === 1
+
+    return `${[...el.slice(0, half)].reverse().join('')}${
+      checkForMiddle ? '' : el.substring(half, half + 1)
+    }${[...el.slice(-half)].reverse().join('')}`
+  })
+}
+
 function insideOut(x) {
-  return x
-    .split(' ')
-    .map((el) => {
-      if (el.length % 2 === 0 || el.length === 1) {
-        return `${[...el.slice(0, Math.floor(el.length / 2))]
-          .reverse()
-          .join('')}${[...el.slice(-Math.floor(el.length / 2))]
-          .reverse()
-          .join('')}`
-      } else {
-        return `${[...el.slice(0, Math.floor(el.length / 2))]
-          .reverse()
-          .join('')}${el.substring(
-          Math.floor(el.length / 2),
-          Math.floor(el.length / 2) + 1
-        )}${[...el.slice(-Math.floor(el.length / 2))].reverse().join('')}`
-      }
-    })
-    .join(' ')
+  x = x.split(' ')
+  return mapping(x).join(' ')
 }
