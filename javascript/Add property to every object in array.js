@@ -28,7 +28,9 @@ var questions = [{
 The questions array is already defined for you and is not the same as the one in the example.
  */
 
-questions.map((el) => {
-  el.usersAnswer = null
-  return el
-})
+// questions.map((el) => {
+//   el.usersAnswer = null
+//   return el
+// })
+
+questions.map((el) => (el.usersAnswer = null))
