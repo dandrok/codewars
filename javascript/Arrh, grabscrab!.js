@@ -20,9 +20,9 @@ Good luck!
 
 const grabscrab = (anagram, dictionary) => {
   anagram = [...anagram].sort().join('')
-  const indexs = dictionary
+  const indexes = dictionary
     .map((el) => [...el].sort().join(''))
     .map((e, i) => (e == anagram ? i : ''))
     .filter(Number.isFinite)
-  return indexs.map((el) => dictionary[el])
+  return indexes.map((el) => dictionary[el])
 }
