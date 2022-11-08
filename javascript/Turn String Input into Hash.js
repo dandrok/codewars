@@ -16,3 +16,16 @@ const strToHash = (str) => {
   arr.map((ar, i) => (obj[arr[i][0]] = Number(arr[i][1])))
   return obj
 }
+
+// replay ^^'
+function strToHash(str) {
+  if (str.length <= 0) return {}
+  let obj = {}
+  const splitStrings = str.split(', ')
+
+  splitStrings.map((el) => {
+    let elSplit = el.split('=')
+    return (obj[elSplit[0]] = Number(elSplit[1]))
+  })
+  return obj
+}
