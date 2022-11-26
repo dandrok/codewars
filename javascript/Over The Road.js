@@ -51,3 +51,8 @@ let evenRow = (h, n) => (2 * n + 2 - h) / 2
 
 const overTheRoad = (h, n) =>
   0 == n % 2 ? oddHouse(evenRow(h, n), n) : evenHouse(oddRow(h, n), n)
+
+/*
+  amazing solution:
+    const overTheRoad = (address, n) => (n*2 +1) - address
+*/
