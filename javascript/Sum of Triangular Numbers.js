@@ -16,7 +16,7 @@ e.g. If 4 is given: 1 + 3 + 6 + 10 = 20.
 Triangular Numbers cannot be negative so return 0 if a negative number is given.
  */
 
-const createArr = (num) => Array.from({ length: n }, (_, i) => i + 1)
+const createArr = (num) => Array.from({ length: num }, (_, i) => i + 1)
 
 const trangularNumbers = (arrOfNums) => {
   return arrOfNums.map((num) => {
