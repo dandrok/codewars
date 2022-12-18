@@ -74,3 +74,28 @@ export class FileMaster {
     return this.filepath.split('/').slice(0, -1).join('/') + '/'
   }
 }
+
+// with regexp:
+
+export class FileMaster_REGEXP {
+  filepath: string
+
+  constructor(filepath: string) {
+    this.filepath = filepath
+  }
+
+  extension(): string {
+    const extensionMatch = this.filepath.match(/\.([^.]+)$/)
+    return extensionMatch ? extensionMatch[1] : ''
+  }
+
+  filename(): string {
+    const filenameMatch = this.filepath.match(/([^/]+)\.\w+$/)
+    return filenameMatch ? filenameMatch[1] : ''
+  }
+
+  dirpath(): string {
+    const dirpathMatch = this.filepath.match(/(.+\/)[^/]+$/)
+    return dirpathMatch ? dirpathMatch[1] : ''
+  }
+}
