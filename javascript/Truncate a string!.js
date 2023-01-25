@@ -13,10 +13,8 @@ Examples
 ('codewars', 7)  ==>  'code...'
 ('codewars', 2)  ==>  'co...'
  */
-const truncateString = (str, num) => {
-  if (str.length <= num) return str
-  return str.substring(0, num > 3 ? num - 3 : num) + '...'
-}
+const truncateString = (str, num) =>
+  str.length <= num ? str : `${str.substring(0, num > 3 ? num - 3 : num)}...`
 
 // function truncateString(str, num) {
 //   if (str.length <= num) return `${str.substring(0, num)}`
