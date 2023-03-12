@@ -8,3 +8,5 @@ Examples:
 -34: 34
 */
 const opposite = (number) => (number === 0 ? 0 : -number)
+
+const opposite2 = (number) => -number
