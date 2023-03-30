@@ -39,3 +39,9 @@ const countSmileys = (arr) =>
         ].indexOf(el) > -1
     )
     .filter(Boolean).length
+
+//second solution
+function countSmileys(arr) {
+  const regexp = new RegExp('^[:;][-~]?[)D]$')
+  return arr.filter((el) => regexp.test(el)).length || 0
+}
