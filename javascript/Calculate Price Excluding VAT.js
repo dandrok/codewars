@@ -16,3 +16,13 @@ If null value given then return -1
 
 const excludingVatPrice = (price) =>
   price === null ? -1 : Number((price - (price / 115) * 15).toFixed(2))
+
+// 2023
+
+const VAT_RATE = 0.15
+
+function excludingVatPrice(price) {
+  if (price === null) return -1
+  const priceExcludingVat = price / (1 + VAT_RATE)
+  return Number(priceExcludingVat.toFixed(2))
+}
