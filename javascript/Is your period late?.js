@@ -14,3 +14,11 @@ Return true if the number of days passed from last to today is greater than cycl
 
 const periodIsLate = (last, today, cycleLength) =>
   (today - last) / (1000 * 60 * 60 * 24) > cycleLength
+
+// 2023
+const ONE_DAY_IN_MS = 86400000
+
+function periodIsLate(last, today, cycleLength) {
+  const diffInMs = today - last
+  return diffInMs / ONE_DAY_IN_MS > cycleLength
+}
