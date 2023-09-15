@@ -9,3 +9,5 @@ Function will return true for lucky numbers and false for others.
  */
 const isLucky = (n) =>
   [...String(n)].reduce((acc, curr) => acc + curr, 0) % 9 === 0
+
+// const isLucky = (n) => !Boolean(n % 9)
