@@ -21,4 +21,4 @@ function remove(string) {
 }
 
 // \b - Word boundary
-const remove = (string) => string.replace(/\b!*/g, '')
+const remove = (string) => string.replace(/\b!+/g, '')
