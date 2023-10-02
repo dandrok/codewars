@@ -14,3 +14,6 @@ one([1, 3, 5, 6, 99, 88, 3], bigger_than_ten) -> false
 one([1, 3, 5, 6, 5, 1, 3], bigger_than_ten) -> false
  */
 const one = (arr, fun) => arr.filter((el) => fun(el)).length === 1
+
+// short version:
+const oneShort = (arr, fun) => arr.filter(fun).length === 1
