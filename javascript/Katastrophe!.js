@@ -20,3 +20,14 @@ function strongEnough(earthquake, age) {
   )
   return finalStrength < initialStrength ? 'Safe!' : 'Needs Reinforcement!'
 }
+
+// OR
+function strongEnough(earthquake, age) {
+  return earthquake.reduce(
+    (acc, [curA, curB, curC]) => acc * (curA + curB + curC),
+    1
+  ) <
+    1000 * Math.exp(-0.01 * age)
+    ? 'Safe!'
+    : 'Needs Reinforcement!'
+}
