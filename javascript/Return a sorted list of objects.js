@@ -30,3 +30,5 @@ function sortList(sortBy, list) {
     return x < y ? 1 : x > y ? -1 : 0
   })
 }
+
+const sortList = (sortBy, list) => list.sort((a, b) => b[sortBy] - a[sortBy])
