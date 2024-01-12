@@ -43,3 +43,17 @@ function nameFile(fmt, nbr, start) {
   }
   return result
 }
+
+// ---------
+
+const isDecimal = (num) => {
+  return !Number.isInteger(num)
+}
+
+const nameFile = (fmt, nbr, start) => {
+  return isDecimal(nbr) || isDecimal(start) || nbr < 0
+    ? []
+    : Array.apply(null, Array(nbr)).map((_, i) =>
+        fmt.replaceAll('<index_no>', start + i)
+      )
+}
