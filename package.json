@@ -1,0 +1,21 @@
+{
+  "name": "codewars",
+  "version": "1.0.0",
+  "description": "codewars collection",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "auto-commit": "git add . && git diff --cached --name-only | head -n 1 | xargs -I{} git commit -m 'feat: {}'",
+    "latest-file": "ls -lt | head -n 2 | tail -n 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dandrok/codewars.git"
+  },
+  "author": "dandrok",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dandrok/codewars/issues"
+  },
+  "homepage": "https://github.com/dandrok/codewars#readme"
+}
