@@ -30,3 +30,10 @@ function isNice(array) {
       )
     : false
 }
+
+function isNice(array) {
+  return (
+    !!array.length &&
+    array.every((num, _, arr) => arr.includes(num + 1) || arr.includes(num - 1))
+  )
+}
