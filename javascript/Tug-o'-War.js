@@ -28,6 +28,7 @@ more examples:
 Good luck!
 */
 const calcScore = (arr) => arr.reduce((acc, curr) => acc + curr, 0);
+
 function tug_o_war(teams) {
   const [teamOne, teamTwo] = teams;
 
