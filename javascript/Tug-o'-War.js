@@ -27,20 +27,19 @@ more examples:
 
 Good luck!
 */
-const calcScore = (arr) => arr.reduce((acc, curr) => acc + curr, 0)
-
+const calcScore = (arr) => arr.reduce((acc, curr) => acc + curr, 0);
 function tug_o_war(teams) {
-  const [teamOne, teamTwo] = teams
+  const [teamOne, teamTwo] = teams;
 
-  const first = calcScore(teamOne)
-  const second = calcScore(teamTwo)
-  const firstAnchor = teamOne.at(0)
-  const secondAnchor = teamTwo.at(-1)
+  const first = calcScore(teamOne);
+  const second = calcScore(teamTwo);
+  const firstAnchor = teamOne.at(0);
+  const secondAnchor = teamTwo.at(-1);
   return first === second && firstAnchor > secondAnchor
     ? `Team 1 wins!`
     : first === second && firstAnchor < secondAnchor
     ? `Team 2 wins!`
     : first === second && firstAnchor === secondAnchor
     ? "It's a tie!"
-    : `Team ${first > second ? '1' : '2'} wins!`
+    : `Team ${first > second ? "1" : "2"} wins!`;
 }
