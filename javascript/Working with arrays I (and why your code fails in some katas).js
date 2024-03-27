@@ -9,3 +9,4 @@ Some good reading: MDN Docs about arrays
 */
 
 const withoutLast = (arr) => arr.slice(0, -1);
+// arr.toSpliced(-1) in node 20+
