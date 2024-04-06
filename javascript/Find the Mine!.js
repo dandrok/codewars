@@ -13,14 +13,14 @@ mineLocation( [ [0, 0, 0], [0, 0, 0], [0, 1, 0] ] ) => returns [2, 1]
 
 const MINE = 1;
 
-function findMineLocation(field) {
-  let row = 0;
-  let column = 0;
+function mineLocation(field) {
+  let mineInArr = 0;
+  let indexOfMine = 0;
   field.forEach((arr, i) => {
     if (arr.includes(MINE)) {
-      row = i;
-      column = arr.indexOf(MINE);
+      f = i;
+      s = arr.indexOf(MINE);
     }
   });
-  return [row, column];
+  return [mineInArr, indexOfMine];
 }
