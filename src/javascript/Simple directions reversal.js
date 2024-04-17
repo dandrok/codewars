@@ -8,19 +8,23 @@ More examples in test cases.
 Good luck!
 */
 
-function solve(array) {
-  const newArr = [...array];
-  const directions = newArr.reverse().map((el) => {
-    const [direction, _] = el.split(" on ");
+// ugly as f.k - i know it is only a draft
+export function solve(array) {
+  const reversedArray = [...array].reverse();
+  const modifiedDirections = reversedArray.map((el) => {
+    const [direction] = el.split(" on ");
     if (direction === "Left") return "Right";
     if (direction === "Right") return "Left";
     return direction;
   });
 
-  const fixedDirections = [...directions.slice(-1), ...directions.slice(0, -1)];
-  const streets = array.reverse().map((el, i) => {
-    const [_, street] = el.split(" on ");
+  const fixedDirections = [
+    ...modifiedDirections.slice(-1),
+    ...modifiedDirections.slice(0, -1),
+  ];
+
+  return reversedArray.map((el, i) => {
+    const [, street] = el.split(" on ");
     return `${fixedDirections[i]} on ${street}`;
   });
-  return streets;
 }
