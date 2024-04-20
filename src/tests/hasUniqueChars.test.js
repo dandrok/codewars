@@ -1,4 +1,4 @@
-import { test, expect } from "vitest";
+import { test, expect, it } from "vitest";
 import { hasUniqueChars } from "../javascript/All unique";
 
 test.skip("hasUniqueChars", () => {

@@ -11,7 +11,7 @@ Important note: Result cannot contain empty string.
 
 */
 
-function multipleSplit(string, delimiters = []) {
+export function multipleSplit(string, delimiters = []) {
   const regExp = new RegExp(`[${delimiters.join("\\")}]`, "g");
   const replaced = string.replace(regExp, "§");
   return replaced.split("§").filter((el) => el.length);
