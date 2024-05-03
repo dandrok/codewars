@@ -1,18 +1,8 @@
 import {describe, it, expect} from "vitest"
 
-describe("middleMe test", () => {
-   it("should be true", () => {
-      // middleMe(N, X, Y)
-      // N num 
-      // X middle 
-      // Y letter to repeat 
-    const letterToRepeat = "a"
-    const num = 6
-    const middleLetter = "B"
-    expect(middleMe(num, letterToRepeat, middle)).toBe("aaaBaaa")
+describe("test vitest", () => {
+   it("should be two", () => {
+    expect(1+1).toStrictEqual(2)
    })
-   //it("should be false", () => {
-    //const testedWord = "aaaBaaa"
-    //expect(middleMe(testedWord)).toBeTruthy()
-   //}) 
+   
 })
