@@ -14,7 +14,6 @@ describe('testing', () => {
     const n = 7
     const x = "B"
     const y = "a"
-    
     expect(middleMe(n, x, y)).toBe(x)
     })
 })
