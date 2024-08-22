@@ -24,15 +24,16 @@ Output: {vowels:0,consonants:0}
 */
 
 function getCount(words) {
-  let obj = {vowels:0,consonants:0};
-  typeof words === 'string' && [...words].forEach(letter => {
-    const vowel = /[aeiou]/gi.test(letter);
-    const constant = /^[^aeiou\s\d\W_]+$/gi.test(letter);
-    if(vowel) {
-      obj.vowels++;
-    } else if (constant){
-      obj.consonants++;
-    }
-  })
+  let obj = { vowels: 0, consonants: 0 };
+  typeof words === "string" &&
+    [...words].forEach((letter) => {
+      const vowel = /[aeiou]/gi.test(letter);
+      const constant = /^[^aeiou\s\d\W_]+$/gi.test(letter);
+      if (vowel) {
+        obj.vowels++;
+      } else if (constant) {
+        obj.consonants++;
+      }
+    });
   return obj;
 }
