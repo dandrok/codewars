@@ -11,5 +11,5 @@ Array will contain at least one item.
 */
 
 Array.prototype.max = function () {
-  return Math.max(this);
+  return Math.max(...this);
 };
