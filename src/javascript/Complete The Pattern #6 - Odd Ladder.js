@@ -39,3 +39,14 @@ function pattern(n) {
   }
   return result.join("\n");
 }
+
+// OR
+
+function pattern(n) {
+  let result = [];
+
+  for (let i = 1; i <= n; i += 2) {
+    result.push(`${String(i).repeat(i)}`);
+  }
+  return result.join("\n");
+}
