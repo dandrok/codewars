@@ -21,3 +21,4 @@ Be creative!
 */
 
 const hasOneChar = (s) => [...new Set([...s])].length === 1;
+// OR const hasOneChar = (s) => new Set(s).size === 1;
