@@ -19,3 +19,7 @@ const refactoryString = (str) =>
         : word
     )
     .join(" ");
+
+// OR SIMPLY:
+const refactoryString = (str) =>
+  str.replace(/\d+/g, (match) => String.fromCharCode(97 + Number(match)));
