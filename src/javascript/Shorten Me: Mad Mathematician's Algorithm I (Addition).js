@@ -10,3 +10,5 @@ Input:
 
     a and b : integer ( 0-10000 )
 */
+
+madAdd=(a,b)=>a-(-b)
