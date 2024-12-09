@@ -39,7 +39,7 @@ const findTheMissingTree = (trees) =>
         return acc;
       }, {})
     )
-      .sort(([_, valA], [_, valB]) => valA - valB)
+      .sort(([_a, valA], [_b, valB]) => valA - valB)
       .at(0)[0]
   );
 // First, we reduce the trees and create an object where the keys are the trees, and the values are their counts.
