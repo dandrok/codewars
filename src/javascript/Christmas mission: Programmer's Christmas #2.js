@@ -34,3 +34,15 @@ function merryChristmas(s1, s2) {
   }
   return [...word].sort().join("") === MERRY_CHRISTMAS;
 }
+
+// const MERRY_CHRISTMAS = " !CMaehimrrrssty";
+
+const merryChristmas = (s1, s2) =>
+  [
+    ...[...s2].reduce(
+      (acc, curr) => (acc.includes(curr) ? acc.replace(curr, "") : acc + curr),
+      s1
+    ),
+  ]
+    .sort()
+    .join("") === MERRY_CHRISTMAS;
