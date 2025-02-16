@@ -8,3 +8,7 @@ function reject(array, predicate) {
   const opposite = array.filter(predicate);
   return array.filter((el) => !opposite.includes(el));
 }
+
+// or simply:
+
+const reject = (array, predicate) => array.filter((el) => !predicate(el));
