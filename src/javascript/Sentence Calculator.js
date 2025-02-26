@@ -27,3 +27,30 @@ function lettersToNumbers(s) {
     return acc + value;
   }, 0);
 }
+
+/* SOME ADJUSTMENTS BELOW */
+const ASCII_LOWERCASE_OFFSET = 96;
+const ASCII_UPPERCASE_OFFSET = 64;
+const ASCII_NUMBER_OFFSET = 48;
+
+const lettersToNumbers = (s) =>
+  [...s].reduce((acc, letter) => {
+    let value;
+    const asciCode = letter.charCodeAt(0);
+    switch (true) {
+      case /[a-z]/.test(letter):
+        value = asciCode - ASCII_LOWERCASE_OFFSET;
+        break;
+      case /[A-Z]/.test(letter):
+        value = (asciCode - ASCII_UPPERCASE_OFFSET) * 2;
+        break;
+      case /[0-9]/.test(letter):
+        value = asciCode - ASCII_NUMBER_OFFSET;
+        break;
+      default:
+        value = 0;
+        break;
+    }
+    return acc + value;
+  }, 0);
+/* --------------------- */
