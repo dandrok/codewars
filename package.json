@@ -6,7 +6,8 @@
   "scripts": {
     "test": "vitest",
     "auto-commit": "git add . && git diff --cached --name-only | head -n 1 | xargs -I{} git commit -m 'feat: {}'",
-    "latest-file": "ls -lt | head -n 2 | tail -n 1"
+    "latest-file": "ls -lt | head -n 2 | tail -n 1",
+    "update-readme": "node update-readme.js"
   },
   "repository": {
     "type": "git",
