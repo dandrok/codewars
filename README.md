@@ -5,4 +5,4 @@ My answers are sometimes not the most beautiful, but they will certainly lead yo
 
 Enjoy and have fun :)
 
-![Codewars](URL:https://www.codewars.com/users/dandrok/badges/small)
+[![Codewars Badge](https://www.codewars.com/users/dandrok/badges/small)](https://www.codewars.com/users/dandrok)
