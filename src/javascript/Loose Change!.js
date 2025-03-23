@@ -26,16 +26,8 @@ Warning, some change may amount to over $10.00!
 
 */
 
-const currencyValues = {
-  penny: 0.01,
-  nickel: 0.05,
-  dime: 0.1,
-  quarter: 0.25,
-  dollar: 1.0,
-};
-
-const changeCount = (change) =>
+const changeCount2 = (change) =>
   `$${change
     .split(" ")
-    .reduce((acc, curr) => acc + currencyValues[curr], 0)
+    .reduce((acc, curr) => acc + CHANGE[curr], 0)
     .toFixed(2)}`;
