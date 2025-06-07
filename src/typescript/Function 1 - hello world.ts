@@ -6,4 +6,4 @@ Sure, this is about as easy as it gets. But how clever can you be to create the 
 */
 
 // Export a function "greet" that returns "hello world!"
-export const greet = ():string => 'hello world!' 
+export const greet = (): string => "hello world!";
