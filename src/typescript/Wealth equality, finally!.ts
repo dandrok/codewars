@@ -25,7 +25,7 @@ Wealth of a citizen will be an integer with minimum equal to 0 (negative wealth 
 Handling of floating point error will not be tested
 */
 
-export function redistributeWealth(wealth: number[]): number[] {
+export function redistributeWealth(wealth: number[]): void {
   const avg = wealth.reduce((acc, curr) => acc + curr, 0) / wealth.length;
-  return wealth.fill(avg);
+  wealth.fill(avg);
 }
