@@ -19,15 +19,11 @@ All strings are unicode strings.
 There are no grammatical exceptions in the tests.
 */
 
-// work in progress..
-// TODO: need to implement other way than ?? 0
-// cuz it this cintidiont is false
-// indexNek > indexNak
 export function dative(word: string): string | undefined {
   const [nek] = [...word.matchAll(/[eéiíöőüű]/g)].slice(-1) ?? [];
   const [nak] = [...word.matchAll(/[aáoóuú]/g)].slice(-1) ?? [];
-  const indexNek = nek?.index ?? 0;
-  const indexNak = nak?.index ?? 0;
+  const indexNek = nek?.index ?? -1;
+  const indexNak = nak?.index ?? -1;
 
   return `${word}${indexNek > indexNak ? "nek" : "nak"}`;
 }
