@@ -20,7 +20,10 @@ const describeAge = (a) =>
   a <= 12
     ? "You're a(n) kid"
     : a <= 17
-    ? "You're a(n) teenager"
-    : a <= 64
-    ? "You're a(n) adult"
-    : "You're a(n) elderly"
+      ? "You're a(n) teenager"
+      : a <= 64
+        ? "You're a(n) adult"
+        : "You're a(n) elderly"
+
+
+describeAge = age => age <= 12 ? "You're a(n) kid" : age <= 17 ? "You're a(n) teenager" : age <= 64 ? "You're a(n) adult" : "You're a(n) elderly"
