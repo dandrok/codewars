@@ -31,3 +31,13 @@ const aliasGen = (f, s) => {
     ? 'Your name must start with a letter from A - Z.'
     : `${first} ${second}`
 }
+
+// updated v2
+const isNumber = (el) => /[0-9]/.test(el)
+
+function aliasGen(first, last) {
+  const [name] = first.toUpperCase();
+  const [sur] = last.toUpperCase();
+  if (isNumber(name) || isNumber(sur)) return "Your name must start with a letter from A - Z."
+  return `${firstName[name]} ${surname[sur]}`
+}
