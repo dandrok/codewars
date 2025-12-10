@@ -22,3 +22,11 @@ function array(arr) {
   arr.shift()
   return arr.length >= 1 ? arr.join(' ') : null
 }
+
+// refactor 
+function array(str) {
+  const arr = str.split(',')
+  arr.pop()
+  arr.shift()
+  return arr.join(' ') || null
+}
