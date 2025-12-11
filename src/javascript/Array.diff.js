@@ -12,3 +12,5 @@ arrayDiff([1,2,2,2,3],[2]) == [1,3]
 function arrayDiff(a, b) {
   return a.filter((el) => !b.includes(el))
 }
+
+const arrayDiff = (a, b) => a.filter(el => !b.includes(el))
