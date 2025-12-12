@@ -7,4 +7,15 @@ spam(1);  // hue
 spam(6);  // huehuehuehuehuehue
 spam(14); // huehuehuehuehuehuehuehuehuehuehuehuehuehue
  */
-const spam = (n) => 'hue'.repeat(n)
+const HUE = "hue";
+
+const spam = (n) => HUE.repeat(n);
+
+const spam = (n) => {
+  let result = "";
+
+  for (let i = 0; i < n; i++) {
+    result += HUE;
+  }
+  return result;
+};
