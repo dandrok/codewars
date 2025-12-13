@@ -16,3 +16,5 @@ the function should return :
 function doubleEveryOther(a) {
   return a.map((el, i, arr) => (i % 2 === 0 ? el : el * 2));
 }
+
+const doubleEveryOther = (a) => a.map((el, i) => (i % 2 === 0 ? el : el * 2))
