@@ -19,3 +19,8 @@ Example:
 */
 
 const d01 = (a, b) => String(a).includes(String(b));
+
+function d01(a, b) {
+  const reg = new RegExp(`^${a}$`)
+  return reg.test(String(b))
+}
