@@ -17,4 +17,7 @@ Input: "Coffee! Buy me a COFFEE!" Output: "COFFEE! Buy me a COFFEE!"
 
 Good luck!
  */
+
 const coffee = (str) => str.replace(/coffee/gi, 'COFFEE')
+
+const coffee = str => str.split(' ').map(word => word === 'coffee' ? word.toUpperCase() : word).join(' ')
