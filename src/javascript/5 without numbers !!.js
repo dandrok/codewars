@@ -7,3 +7,5 @@ Good luck :)
  */
 
 const unusualFive = () => 'abcde'.length
+
+const unusualFive = () => +!![] + +!![] + +!![] + +!![] + +!![] 
