@@ -6,4 +6,4 @@ The string may contain any of the 128 ASCII characters.
 Characters are case-sensitive, e.g. 'a' and 'A' are considered different characters.
  */
 
-export const hasUniqueChars = (str) => new Set(str).size == str.length;
+export const hasUniqueChars = (str) => new Set(str).size === str.length;
