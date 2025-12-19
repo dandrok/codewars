@@ -3,3 +3,8 @@ Complete the method that takes a boolean value and return a "Yes" string for tru
  */
 
 export const boolToWord = (bool: boolean): string => (bool ? 'Yes' : 'No')
+
+export const boolToWord = (bool: boolean): string => {
+  if (bool) return 'Yes'
+  return 'No'
+}
