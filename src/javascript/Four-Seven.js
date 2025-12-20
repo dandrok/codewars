@@ -21,3 +21,7 @@ const fourSeven = (n) => {
   }
   return sevenFour[n] || 0
 }
+
+const fourSeven = (n) => {
+  return n === 4 ? 7 : n === 7 ? 4 : 0
+}
