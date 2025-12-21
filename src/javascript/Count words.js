@@ -20,3 +20,6 @@ Doublecheck that words with chars like -, ', ` are counted right.
  */
 
 const countWords = (str) => str.split(/\S+/).length - 1
+
+const countWords22 = (str) => str.split(' ').filter((el) => /[a-z]/gi.test(el)).length
+
