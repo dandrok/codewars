@@ -19,3 +19,5 @@ const solve = (arr) => [...new Set(arr.reverse())].reverse()
 //OR
 
 const solve = (arr) => arr.filter((val, i) => arr.lastIndexOf(val) == i)
+
+const solve = (arr) => 
