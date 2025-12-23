@@ -15,3 +15,5 @@ export const solution = (str: string, end: string): boolean => {
 
 export const solution2 = (str: string, end: string): boolean =>
   str.endsWith(end)
+
+export const solution3 = (str: string, end: string): boolean => str.slice(-end.length) === end
