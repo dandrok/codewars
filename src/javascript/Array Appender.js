@@ -13,3 +13,5 @@ For example:
 function appendArrays(arr1, arr2) {
   return [...arr1, ...arr2]
 }
+
+const appendArrays = (arr1, arr2) => [...arr1, ...arr2]
