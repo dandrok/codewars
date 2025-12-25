@@ -19,3 +19,13 @@ Good luck!
 */
 
 const solve = (arr) => arr.find((curr) => !arr.includes(-curr));
+
+const solve = (arr) => {
+  let result = []
+  arr.forEach((el, i, ar) => {
+    if (!ar.includes(-el)) {
+      result.push(el)
+    }
+  })
+  return result
+}
