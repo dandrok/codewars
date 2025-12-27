@@ -5,3 +5,5 @@ spacify("hello world") // returns "h e l l o   w o r l d"
 */
 
 const spacify = (str) => [...str].join(' ')
+
+const spacify = (str => str.split('').join(' ')
