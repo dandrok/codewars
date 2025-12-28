@@ -8,3 +8,5 @@ const sortArray = (v) =>
     .split('')
     .sort((e, i) => e - i)
     .join('')
+
+const sortArray = (arr) => [...arr].sort((a, b) => a - b).join('')
