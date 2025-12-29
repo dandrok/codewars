@@ -16,3 +16,7 @@ Note: base is a non-negative number, factor is a positive number.
  */
 
 const checkForFactor = (base, factor) => base % factor === 0
+
+const checkForFactor = (base, factor) => {
+  return base % factor === 0
+}
