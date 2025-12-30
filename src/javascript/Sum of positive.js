@@ -9,3 +9,7 @@ function positiveSum(arr) {
   //   return arr.filter(num => num > 0).reduce((a,b) => a+b,0)
   return arr.reduce((a, b) => (b > 0 ? a + b : a), 0)
 }
+
+const positiveSum = (arr) => {
+  return arr.filter((el) => el > 0).reduce((acc, curr) => acc + curr, 0)
+}
