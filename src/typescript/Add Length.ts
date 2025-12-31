@@ -13,3 +13,5 @@ Note: String will have at least one element; words will always be separated by a
 export function addLength(str: string): string[] {
   return str.split(" ").map((word) => `${word} ${word.length}`);
 }
+
+export const addLength = (str: string) => str.split(' ').map((word: string) => `${word} ${word.length}`)
