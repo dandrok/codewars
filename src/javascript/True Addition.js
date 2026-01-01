@@ -17,3 +17,8 @@ function count(n) {
   const p = n
   return p
 }
+
+const count = (n) => {
+  let x;
+  return x = n
+}
