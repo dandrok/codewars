@@ -12,3 +12,12 @@ number(["a", "b", "c"]) // => ["1: a", "2: b", "3: c"]
  */
 
 const number = (a) => a.map((el, i) => `${i + 1}: ${el}`)
+
+function number(a) {
+  let result = []
+
+  for (let i = 0; i < a.length; i++) {
+    result.push(`${i + 1}: ${a[i]}`)
+  }
+  return result
+};
