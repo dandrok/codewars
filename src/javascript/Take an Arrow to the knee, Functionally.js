@@ -11,3 +11,6 @@ C# => Tools.FromCharCode(97) // a
  */
 
 const ArrowFunc = (arr) => arr.map((a) => String.fromCharCode(a)).join('')
+
+const ArrowFunc = arr => String.fromCharCode(...arr);
+
