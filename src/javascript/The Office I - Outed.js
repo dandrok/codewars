@@ -23,3 +23,11 @@ function outed(meet, boss) {
     meetValues.reduce((acc, curr) => acc + curr) / meetValues.length
   return average <= 5 ? 'Get Out Now!' : 'Nice Work Champ!'
 }
+
+function outed(meet, boss) {
+  const ratingObject = { ...meet, [boss]: meet[boss] * 2 }
+  const values = Object.values(ratingObject)
+  const avg = values.reduce((acc, curr) => acc + curr, 0) / values.length
+
+  return avg <= 5 ? 'Get Out Now!' : 'Nice Work Champ!'
+}
