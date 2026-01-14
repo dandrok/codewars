@@ -16,12 +16,21 @@
 const incrementer = (nums) => {
   const inc = nums.map((a, index) => a + index + 1)
   return inc.map((x) => (x >= 20 ? x - 20 : x >= 10 ? x - 10 : x))
+
 }
 
 // OR
 
-const incrementer = (num) => num.map((a, i) => (a + i + 1) % 10)
+const incrementer = (num) => num.map((num, i) => (num + i + 1) % 10)
 
 // OR
 
-const incrementer = (num) => num.map((a, i) => +(a + i + 1 + '').slice(-1))
+const incrementer = (num) => num.map((num, i) => +(num + i + 1 + '').slice(-1))
+
+function incrementer(nums) {
+  let result = []
+  for (let i = 0; i < nums.length; i++) {
+    result.push((nums[i] + i + 1) % 10)
+  }
+  return result
+}
