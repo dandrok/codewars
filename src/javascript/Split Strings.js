@@ -22,3 +22,16 @@ function solution(str) {
     return chec
   }
 }
+
+function solution(str) {
+  let result = []
+
+  for (let i = 0; i < str.length; i += 2) {
+    let letters = str.slice(i, i + 2)
+    if (letters.length === 1) {
+      letters = `${letters}_`
+    }
+    result.push(letters)
+  }
+  return result
+}
