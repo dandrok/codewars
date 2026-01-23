@@ -9,3 +9,5 @@ HINT : use closures
 */
 
 const sum = (a, b) => a + b || ((c) => a + c);
+
+const sum = (a, b) => b !== undefined ? (a + b) : ((c) => a + c)
