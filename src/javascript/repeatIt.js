@@ -14,4 +14,4 @@ Example
 ANSWER
  */
 
-const repeatIt = (s, n) => (typeof s == 'string' ? s.repeat(n) : 'Not a string')
+const repeatIt = (s, n) => (typeof s === 'string' ? s.repeat(n) : 'Not a string')
