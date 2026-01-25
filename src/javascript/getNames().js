@@ -13,3 +13,5 @@ getNames(data) // should return ['Joe', 'Bill', 'Kate']
  */
 
 const getNames = (data) => data.map((el) => el.name)
+
+const getNames = (date) => date.map(({ name }) => name)
