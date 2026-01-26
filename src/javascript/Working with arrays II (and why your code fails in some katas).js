@@ -12,3 +12,5 @@ const removeNthElement = (arr, n) => {
   arrCopy.splice(n, 1)
   return arrCopy
 }
+
+const removeNthElement = (arr, n) => arr.toSpliced(n, 1) 
