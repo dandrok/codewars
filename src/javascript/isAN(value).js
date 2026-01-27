@@ -5,9 +5,11 @@ So let's make a proper function, called isAN, for is A Number. If you pass it a 
 */
 
 function isAN(value) {
-    if(typeof value === 'number' || (value && typeof value.valueOf() === 'number' && value.toPrecision() != "NaN")) {
-      return true
-    } else {
-      return false
-    }
+  if (typeof value === 'number' || (value && typeof value.valueOf() === 'number' && value.toPrecision() != "NaN")) {
+    return true
+  } else {
+    return false
   }
+}
+
+const isAN = (v) => typeof v === 'number' || (v && typeof v.valueOf() === 'number' && v.toPrecision() != "NaN")
