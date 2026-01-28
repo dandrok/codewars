@@ -11,3 +11,5 @@ y is not considered a vowel for this kata
  */
 
 const shortcut = (string) => string.replace(/[aeiou]/g, '')
+
+const shortcut = (str) => str.map(letter => /[aeiou]/g.test(letter) ? '' : letter)
