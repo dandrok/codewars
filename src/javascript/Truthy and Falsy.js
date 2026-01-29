@@ -15,5 +15,5 @@ You are given two empty arrays (truthy and falsy) and you have to fill this arra
 with at least 5 elements in each which will evaluate to true or false accordingly.
 */
 
-const truthy = [1, '1', true, 'false', {}];
-const falsy = [0, '', false, null, undefined];
+const truthy = [1, '1', true, 'false', {}, [], 1n, Symbol(), new Date()];
+const falsy = [0, '', false, null, undefined, NaN];
