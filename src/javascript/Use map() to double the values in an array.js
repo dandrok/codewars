@@ -15,3 +15,11 @@ double(someNumbers); // should return [2,4,20,114]
 */
 
 const double = (array) => array.map((num) => num * 2);
+
+const double = arr => {
+  let result = [];
+  for (el of arr) {
+    result.push(el * 2)
+  }
+  return result
+}
