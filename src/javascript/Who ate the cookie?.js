@@ -10,6 +10,7 @@ Please leave feedback for this kata. Cheers!
 
  */
 
+
 function cookie(x) {
   if (typeof x === 'string') {
     return 'Who ate the last cookie? It was Zach!'
@@ -19,3 +20,12 @@ function cookie(x) {
     return 'Who ate the last cookie? It was the dog!'
   }
 }
+
+const inputType = (input) => typeof input === 'string'
+  ? 'Zach'
+  : typeof input === 'number'
+    ? 'Monica'
+    : 'the dog'
+
+const cookie = (x) => `Who ate the last cookie? It was ${inputType(x)}!`
+
