@@ -16,3 +16,8 @@ Example (Input --> Output)
  */
 
 const cookingTime = (e) => Math.ceil(e / 8) * 5
+
+
+function cookingTime(time) {
+  return Math.ceil((time / 8) * 5)
+}
