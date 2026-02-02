@@ -20,3 +20,7 @@ More details here: https://en.wikipedia.org/wiki/Comma-separated_values
  */
 
 const toCsvText = (array) => array.join('\n')
+
+function toCsvText(arr) {
+  return arr.join('\n')
+}
