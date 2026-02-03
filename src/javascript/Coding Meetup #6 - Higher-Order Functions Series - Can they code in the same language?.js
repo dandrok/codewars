@@ -25,3 +25,5 @@ Notes:
 function isSameLanguage(list) {
   return list.every(({ language }) => language === list[0].language)
 }
+
+const isSameLanguage = (list) => list.every(({ language }) => language === list[0].language)
