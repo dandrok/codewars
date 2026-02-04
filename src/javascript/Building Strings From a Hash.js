@@ -12,3 +12,5 @@ function solution(pairs) {
     .map((el) => el.join(' = '))
     .join()
 }
+
+const solution = (pairs) => Object.entries(pairs).map(el => el.join(' = ')).join()
