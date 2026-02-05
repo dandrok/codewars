@@ -15,3 +15,6 @@ findInArray([1,3,5,6,7], trueIfEven) // should === 3
 // YOU CAN USE array.findIndex(iterator) instead ^^
 const findInArray = (array, iterator) =>
   array.lastIndexOf(array.find(iterator));
+
+
+const findInArray = (arr, iterator) => arr.findIndex(iterator)
