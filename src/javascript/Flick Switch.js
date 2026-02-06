@@ -28,3 +28,16 @@ function flickSwitch(arr) {
     return val
   })
 }
+
+const flickSwitch = (arr) => {
+
+  let result = []
+  let val = true
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 'flick') {
+      val = !val
+    }
+    result.push(val)
+  }
+  return result
+}
