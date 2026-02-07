@@ -27,3 +27,9 @@ const fileTypes = {
 };
 
 const linuxType = (fileAttribute) => fileTypes[fileAttribute[0]];
+
+
+const linuxType2 = (fileAttribute) => {
+  const [firstChar] = fileAttribute
+  return fileTypes[firstChar]
+}
