@@ -27,5 +27,9 @@ function bucketOf(str) {
   let isWater = /water|wet|wash/gi.test(str)
   let isSlime = /(I don't know)|slime/gi.test(str)
 
-  return isSludge ? 'sludge' : isWater ? 'water' : isSlime ? 'slime' : 'air'
+
+  if (isSludge) return 'sludge'
+  if (isWater) return 'water'
+  if (isSlime) return 'slime'
+  return 'air'
 }
