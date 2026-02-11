@@ -16,6 +16,4 @@ function toCurrency(price) {
     .join('')
 }
 
-function toCurrency2(price) {
-  return price.toLocaleString()
-}
+const toCurrency2 = (price) => price.toLocaleString()
