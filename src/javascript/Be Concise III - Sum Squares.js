@@ -13,4 +13,4 @@ Try researching about built-in Array methods; they may help shorten your code a 
 Good luck!
  */
 
-const sumSquares = (array) => array.reduce((a, b) => a + b ** 2, 0)
+const sumSquares = (array) => array.reduce((acc, curr) => acc + curr ** 2, 0)
