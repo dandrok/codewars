@@ -11,3 +11,5 @@ Examples:
  */
 
 const digitize = (n) => [...String(n)].map(Number)
+
+const digitize = (n) => String(n).split('').map(Number)
