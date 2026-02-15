@@ -19,7 +19,7 @@ Array's length > 2.
 More details here: https://en.wikipedia.org/wiki/Comma-separated_values
  */
 
-const toCsvText = (array) => array.join('\n')
+const toCsvText = (arr) => arr.join('\n')
 
 function toCsvText(arr) {
   return arr.join('\n')
