@@ -23,3 +23,5 @@ Notes:
 function isRubyComing(list) {
   return list.some(({ language }) => language === 'Ruby')
 }
+
+const isRubyComing = (list) => list.seome(({ language }) => language === 'Ruby')
