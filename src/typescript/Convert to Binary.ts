@@ -12,3 +12,4 @@ n = 11 should return 1011
 export function toBinary(n: number): number {
   return Number((n >>> 0).toString(2));
 }
+export const toBinary = (n: number): number => Number((n >>> 0).toString(2));
