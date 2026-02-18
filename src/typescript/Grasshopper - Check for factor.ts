@@ -19,3 +19,4 @@ Note: base is a non-negative number, factor is a positive number.
 export function checkForFactor(base: number, factor: number) {
   return base % factor === 0;
 }
+export const checkForFactor = (base: number, factor: number) => base % factor === 0
