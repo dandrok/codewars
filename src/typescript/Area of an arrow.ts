@@ -7,4 +7,4 @@ a and b are integers and > 0
 Write a function which returns the area of the arrow.
  */
 
-const arrowArea = (a, b) => (a * b) / 4
+const arrowArea = (a: number, b: number) => (a * b) / 4
