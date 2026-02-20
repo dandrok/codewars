@@ -16,3 +16,6 @@ Example:
 export function countLettersAndDigits(input: string): number {
   return input.replace(/[^a-zA-Z0-9]/g, '').length
 }
+
+
+export const countLettersAndDigits = (input: string): number => (input.match(/[a-z\d]/gi) || []).length
