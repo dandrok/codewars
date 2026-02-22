@@ -6,3 +6,5 @@ export function parseF(s: string): number | null {
   const num = Number(s);
   return !isNaN(num) ? num : null;
 }
+
+export const parseF (s: string): number | null => !isNaN(Number(s)) ? Number(s) : null 
