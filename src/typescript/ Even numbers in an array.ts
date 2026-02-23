@@ -8,6 +8,5 @@ For example:
 ([6, -25, 3, 7, 5, 5, 7, -3, 23], 1) => [6]
  */
 
-export const evenNumbers = (array: number[], n: number): number[] => {
-  return array.filter((a) => a % 2 == 0).slice(-n)
-}
+export const evenNumbers = (array: number[], n: number): number[] => array.filter((a) => a % 2 == 0).slice(-n)
+
