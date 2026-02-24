@@ -8,13 +8,12 @@ The input will be a lowercase string with no spaces.
 Good luck!
  */
 
-export const capitalize = (s: string) => {
-  return [
-    [...s]
-      .map((l, i) => (i % 2 === 0 ? l.toUpperCase() : l.toLowerCase()))
-      .join(''),
-    [...s]
-      .map((l, i) => (i % 2 !== 0 ? l.toUpperCase() : l.toLowerCase()))
-      .join(''),
-  ]
-}
+export const capitalize = (s: string) => [
+  [...s]
+    .map((l, i) => (i % 2 === 0 ? l.toUpperCase() : l.toLowerCase()))
+    .join(''),
+  [...s]
+    .map((l, i) => (i % 2 !== 0 ? l.toUpperCase() : l.toLowerCase()))
+    .join(''),
+]
+
