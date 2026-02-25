@@ -39,7 +39,7 @@ Constraints:
     digits does not contain any leading 0's.
 
 */
-function plusOne(digits: number[]): number[] {
+const plusOne = (digits: number[]): number[] => {
   const str = digits.join("");
   const num = Number(str) + 1;
   return [...String(num)].map(Number)
