@@ -11,6 +11,5 @@ Examples: (Input --> Output)
 ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
 */
 
-export function number(array: string[]): string[] {
-  return array.map((el, i) => `${i + 1}: ${el}`);
-}
+export const number = (array: string[]): string[] => array.map((el, i) => `${i + 1}: ${el}`);
+
