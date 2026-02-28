@@ -13,5 +13,4 @@ Function should return a dictionary/Object/Hash with "status" as a key, whose va
 
 But as you will see after clicking RUN or ATTEMPT this code has several bugs, please fix them.
  */
-const getStatus = (isBusy) =>
-  isBusy ? { status: 'busy' } : { status: 'available' }
+const getStatus = (isBusy) => isBusy ? { status: 'busy' } : { status: 'available' }
