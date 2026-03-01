@@ -11,5 +11,4 @@ vowelOne( "abceios" ) // "1001110"
 vowelOne( "aeiou, abc" ) // "1111100100"
  */
 
-const vowelOne = (s) =>
-  s.replace(/[^aeiou.]|[\.]/gi, '0').replace(/[aeiou]/gi, '1')
+const vowelOne = (s) => s.replace(/[^aeiou.]|[\.]/gi, '0').replace(/[aeiou]/gi, '1')
