@@ -8,8 +8,8 @@ toWeirdCase( "String" );//=> returns "StRiNg"
 toWeirdCase( "Weird string case" );//=> returns "WeIrD StRiNg CaSe"
  */
 
-const toWeirdCase = (string) => {
-  return string
+const toWeirdCase = (string) =>
+  string
     .split(' ')
     .map((el) =>
       [...el]
@@ -17,4 +17,4 @@ const toWeirdCase = (string) => {
         .join('')
     )
     .join(' ')
-}
+
