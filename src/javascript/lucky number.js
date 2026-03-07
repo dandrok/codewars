@@ -7,7 +7,6 @@ Write a function to find if a number is lucky or not. If the sum of all digits i
 
 Function will return true for lucky numbers and false for others.
  */
-const isLucky = (n) =>
-  [...String(n)].reduce((acc, curr) => acc + curr, 0) % 9 === 0
+const isLucky = (n) => [...String(n)].reduce((acc, curr) => acc + curr, 0) % 9 === 0
 
 // const isLucky = (n) => !Boolean(n % 9)
