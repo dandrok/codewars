@@ -6,10 +6,9 @@ Write a function to help Bob with this calculation.
 
 */
 //test
-export function getVolumeOfCuboid(
+export const getVolumeOfCuboid = (
   length: number,
   width: number,
   height: number
-): number {
-  return length * width * height;
-}
+): number => length * width * height;
+
