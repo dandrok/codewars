@@ -21,5 +21,4 @@ In Shell bash a1 and a2 are strings. The return is a string where words are sepa
 Beware: In some languages r must be without duplicates.
  */
 
-const inArray = (arr1, arr2) =>
-  arr1.filter((el) => arr2.join(' ').search(el) != -1).sort()
+const inArray = (arr1, arr2) => arr1.filter((el) => arr2.join(' ').search(el) != -1).sort()
