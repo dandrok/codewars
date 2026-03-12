@@ -6,6 +6,4 @@ Considering these factors, write a function that tells you if it is possible to 
 Function should return true if it is possible and false if not.
 */
 
-export const zeroFuel = (distance: number, mpg: number, fuelLeft: number): boolean => {
-  return mpg * fuelLeft >= distance
-};
+export const zeroFuel = (distance: number, mpg: number, fuelLeft: number): boolean =>  mpg * fuelLeft >= distance
