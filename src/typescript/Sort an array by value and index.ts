@@ -25,9 +25,9 @@ Have fun coding it and please don't forget to vote and rank this kata! :-)
 I have also created other katas. Take a look if you enjoyed this kata!
 */
 
-export function sortByValueAndIndex(array: number[]): number[] {
-  return array
+export const sortByValueAndIndex = (array: number[]): number[] => 
+  array
     .map((num, i) => ({ num, score: num * (i + 1) }))
     .sort((a, b) => a.score - b.score)
     .map(({ num }) => num);
-}
+
