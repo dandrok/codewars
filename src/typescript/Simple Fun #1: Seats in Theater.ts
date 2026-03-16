@@ -42,11 +42,18 @@ Constraints: 1 ≤ row ≤ nRows.
 The number of people who sit strictly behind you and in your column or to the left.
 */
 
-export function seatsInTheater(
+export type SeatsInTheater = {
   nCols: number,
   nRows: number,
   col: number,
   row: number
-) {
-  return (nCols - col + 1) * (nRows - row);
 }
+
+export const seatsInTheater = ({
+  nCols,
+  nRows,
+  col,
+  row,
+}: SeatsInTheater): number => 
+  (nCols - col + 1) * (nRows - row);
+
