@@ -4,13 +4,10 @@ The vowel substrings in the word codewarriors are o,e,a,io. The longest of these
 Good luck!
  */
 
-export const solve = (s: string) => {
-  return s
+export const solve = (s: string) =
+  s
     .split(/[^aoeiu]/i)
     .map((v) => v.length)
     .sort((a, b) => b - a)[0]
-}
 
-export const solve2 = (s: string) => {
-  return Math.max(...s.split(/[^aiueo]/).map((x) => x.length))
-}
+export const solve2 = (s: string) => Math.max(...s.split(/[^aiueo]/).map((x) => x.length))
