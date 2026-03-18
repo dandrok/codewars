@@ -17,5 +17,4 @@ currencyBRL(10.509) => 'R$ 10,51'
 
 */
 
-const currencyBRL = (number) =>
-  `R$ ${number?.toFixed(2) || "0.00"}`.replace(".", ",");
+const currencyBRL = (number) => `R$ ${number?.toFixed(2) || "0.00"}`.replace(".", ",");
