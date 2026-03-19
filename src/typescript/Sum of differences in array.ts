@@ -10,6 +10,6 @@ Sum: (10 - 2) + (2 - 1) = 8 + 1 = 9
 If the array is empty or the array has only one element the result should be 0 (Nothing in Haskell, None in Rust).
  */
 
-export const sumOfDifferences = (arr: number[]): number => {
-  return arr.length > 1 ? Math.max(...arr) - Math.min(...arr) : 0
-}
+export const sumOfDifferences = (arr: number[]): number => 
+ arr.length > 1 ? Math.max(...arr) - Math.min(...arr) : 0
+
