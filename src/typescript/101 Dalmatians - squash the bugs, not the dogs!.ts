@@ -8,6 +8,7 @@ The number of dogs will always be a number and there will always be at least 1 d
 Good luck!
  */
 
+
 export const howManyDalmatians = (number: number): string => {
   const dogs = [
     'Hardly any',
@@ -18,8 +19,8 @@ export const howManyDalmatians = (number: number): string => {
   return number <= 10
     ? dogs[0]
     : number <= 50
-    ? dogs[1]
-    : number === 101
-    ? dogs[3]
-    : dogs[2]
+      ? dogs[1]
+      : number === 101
+        ? dogs[3]
+        : dogs[2]
 }
