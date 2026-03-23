@@ -7,6 +7,6 @@ If a = [1, 2] and b = [1], the result should be [2].
 If a = [1, 2, 2, 2, 3] and b = [2], the result should be [1, 3].
 */
 
-export function arrayDiff(a: number[], b: number[]): number[] {
-  return a.filter((el) => !b.includes(el));
-}
+export const arrayDiff = (a: number[], b: number[]): number[] =>
+  a.filter((el) => !b.includes(el));
+
