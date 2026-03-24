@@ -7,5 +7,4 @@ Example:
 0 => [0]
  */
 
-export const digitize = (n: number): number[] =>
-  [...String(n)].reverse().map(Number)
+export const digitize = (n: number): number[] => [...String(n)].reverse().map(Number)
