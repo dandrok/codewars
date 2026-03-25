@@ -19,7 +19,7 @@ Output: "Pls go away and stop eating my sheep"
 
  */
 
-export function warnTheSheep(queue: string[]): string {
+export const warnTheSheep = (queue: string[]): string => {
   const wolf = queue.reverse().indexOf('wolf')
 
   return wolf === 0
