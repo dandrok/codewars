@@ -11,19 +11,27 @@
 //    should return solution with string format [word]: [length] chars
 //    should return no longest word found if there's 2 or more word found.
 
-//TODO: quick refactor draft - WIP
 
-export const findTheLongestWord = (input: string): string => {
+
+
+export const formatResult = (word: string): string => `${word}: ${word.length} chars`
+
+export const findTheLongestWord = (input?: string): string => {
   if (!input) throw new Error('error')
-  const words = input.split(' ') ?? []
-  if (words.length === 1) return `${input}: ${input.length} chars`
+  const words = input.split(' ')
 
-  const sortDesc = words.sort((a, b) => b.length - a.length)
+  if (words.length === 1) {
+    return formatResult(words[0])
+  }
 
-  const longest = sortDesc.at(0) ?? ''
-  console.log(longest)
-  const shortest = sortDesc?.at(-1)?.length ?? ''
+  const sorted = words.sort((a, b) => b.length - a.length)
 
-  return longest > shortest ? `${longest}: ${longest.length} chars` : 'no longest word found'
+  const [longest, secondWord] = sorted
 
+  if (secondWord.length === longest.length) {
+    return 'no longest word found'
+  }
+
+  return formatResult(longest)
 };
+

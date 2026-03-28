@@ -28,4 +28,4 @@ const type = [
 const bald = (x) => [
   x.replaceAll("/", "-"),
   type[x.match(/\//g)?.length || 0] || "Hobo!",
-];
+]; 
