@@ -21,8 +21,8 @@ Notes:
     You will always be given an array with at least 1 string to check.
 
  */
-function authList(arr) {
-  return arr
+const authList = (arr) =>
+  arr
     .map((el) => /^(?=.*[a-z])(?=.*\d)[a-z\d]{6,10}$/.test(el))
     .every(Boolean)
-}
+
