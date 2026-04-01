@@ -6,9 +6,9 @@ freqSeq("19999999", ":"); // => "1:7:7:7:7:7:7:7"
 freqSeq("^^^**$", "x"); // => "3x3x3x2x2x1"
  */
 
-export const freqSeq = (str: string, sep: string): string => {
-  return str
+export const freqSeq = (str: string, sep: string): string =>
+  str
     .split('')
     .map((e) => str.split(e).length - 1)
     .join(sep)
-}
+
