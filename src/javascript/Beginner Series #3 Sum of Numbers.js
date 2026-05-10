@@ -15,11 +15,14 @@ Examples (a, b) --> output (explanation)
 const getSum = (a, b) => {
   return a < b
     ? Array(b - a + 1)
-        .fill()
-        .map((_, idx) => a + idx)
-        .reduce((x, y) => x + y)
+      .fill()
+      .map((_, idx) => a + idx)
+      .reduce((x, y) => x + y)
     : Array(a - b + 1)
-        .fill()
-        .map((_, idx) => b + idx)
-        .reduce((x, y) => x + y)
+      .fill()
+      .map((_, idx) => b + idx)
+      .reduce((x, y) => x + y)
 }
+
+
+const getSum = (a, b) => (Math.abs(a - b) + 1) * (a + b) / 2
