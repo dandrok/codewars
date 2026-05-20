@@ -11,18 +11,15 @@
 const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 const maxChar = 26
-
-// TODO: update solution to match codewars 
+// v1
 function titleToNumber(title) {
-  return [...title].reverse().reduce((acc, curr, i) => {
+  return title.split('').reverse().reduce((acc, curr, i) => {
     const multiply = alphabet.indexOf(curr) + 1
-
     if (i > 0) {
-      acc += multiply * maxChar * i
+      acc += Math.pow(maxChar, i) * multiply
     } else {
       acc += multiply
     }
-    console.log(acc)
     return acc
   }, 0)
 }
