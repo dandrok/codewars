@@ -8,13 +8,33 @@
 // Column title: "Z" --> return 26
 // Column title: "AA" --> return 27
 
+
+// v1
 const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 const maxChar = 26
-// v1
+
 function titleToNumber(title) {
   return title.split('').reverse().reduce((acc, curr, i) => {
     const multiply = alphabet.indexOf(curr) + 1
+    if (i > 0) {
+      acc += Math.pow(maxChar, i) * multiply
+    } else {
+      acc += multiply
+    }
+    return acc
+  }, 0)
+}
+
+
+// v2
+const maxChar = 26
+
+function titleToNumber(title) {
+  const reversed = title.split('').reverse()
+
+  return reversed.reduce((acc, curr, i) => {
+    const multiply = curr.charCodeAt(0) - 64
     if (i > 0) {
       acc += Math.pow(maxChar, i) * multiply
     } else {
