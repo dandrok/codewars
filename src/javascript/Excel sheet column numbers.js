@@ -43,3 +43,15 @@ function titleToNumber(title) {
     return acc
   }, 0)
 }
+
+
+// v3
+function titleToNumber(title) {
+  let solution = 0;
+
+  for (let i = 0; i < title.length; i++) {
+    solution += Math.pow(26, title.length - 1 - i) * (title[i].charCodeAt(0) - 64)
+  }
+
+  return solution
+}
