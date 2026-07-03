@@ -39,3 +39,30 @@ function isPalindrome(s: string): boolean {
   console.log(letters.reverse().join(''))
   return letters.join('').toLowerCase() === letters.reverse().join('').toLowerCase()
 };
+
+
+// or - more optimal solution 
+const testChar = (char: string): boolean => /[a-z0-9]/.test(char)
+
+function isPalindrome2(s: string): boolean {
+  s = s.toLowerCase()
+  let left = 0;
+  let right = s.length - 1;
+
+  while (left < right) {
+    if (!testChar(s[left])) {
+      left++
+      continue
+    }
+    if (!testChar(s[right])) {
+      right--
+      continue
+    }
+    if (s[left] !== s[right]) {
+      return false
+    }
+    left++
+    right--
+  }
+  return true
+};
