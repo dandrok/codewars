@@ -30,6 +30,7 @@
 // TODO: WIP - optimize to 0(n) or 0(1)
 function majorityElement(nums: number[]): number {
   const uniqueEl = [...new Set(nums)]
+
   let longestLength = 0
   let result = 0
   uniqueEl.forEach((el) => {
@@ -42,3 +43,22 @@ function majorityElement(nums: number[]): number {
   })
   return result
 };
+
+// 0(1)
+function majorityElement2(nums: number[]): number {
+  let majority = nums[0];
+  let majorityLength = 0;
+
+  for (const num of nums) {
+    if (majorityLength === 0) {
+      majority = num
+    }
+    if (num === majority) {
+      majorityLength++
+    } else {
+      majorityLength--
+    }
+
+  }
+  return majority
+}
