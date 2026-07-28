@@ -26,9 +26,30 @@
 //
 //     2 <= nums.length <= 500
 //     1 <= nums[i] <= 10^3
+
+// O(n log n) solution     
 function maxProduct(nums: number[]): number {
   // naive solution
   const sortedNums = nums.sort((a, b) => a - b)
 
   return (sortedNums.at(-1) - 1) * (sortedNums.at(-2) - 1)
+};
+
+
+// O(n) solution 
+function maxProduct(nums: number[]): number {
+  let firstMax = 0;
+  let secondMax = 0;
+
+  for (const num of nums) {
+    if (num > firstMax) {
+      secondMax = firstMax
+      firstMax = num
+    }
+    else if (num > secondMax) {
+      secondMax = num
+    }
+  }
+
+  return (firstMax - 1) * (secondMax - 1)
 };
