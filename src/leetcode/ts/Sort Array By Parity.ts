@@ -27,3 +27,27 @@ function sortArrayByParity(nums: number[]): number[] {
   // naive solution
   return nums.sort((a, _b) => a % 2 === 0 ? -1 : 1)
 };
+
+const even = (n) => n % 2 === 0
+
+function sortArrayByParity(nums: number[]): number[] {
+  // two pointer sorting
+  let left = 0;
+  let right = nums.length - 1;
+
+  while (left < right) {
+    if (!even(nums[left]) && even(nums[right])) {
+      [nums[left], nums[right]] = [nums[right], nums[left]]
+      left++
+      right--
+    } else if (!even(nums[left]) && !even(nums[right])) {
+      right--
+    } else if (even(nums[left]) && even(nums[right])) {
+      left++
+    } else {
+      left++
+      right--
+    }
+  }
+  return nums;
+};
