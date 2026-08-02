@@ -25,13 +25,15 @@
 
 function sortArrayByParity(nums: number[]): number[] {
   // naive solution
+  // time O(n lon n) extra space complexity O(n)
   return nums.sort((a, _b) => a % 2 === 0 ? -1 : 1)
 };
 
 const even = (n) => n % 2 === 0
 
 function sortArrayByParity(nums: number[]): number[] {
-  // two pointer sorting
+  // two pointer sorting 
+  // time O(n) and memory space 0(n)
   let left = 0;
   let right = nums.length - 1;
 
