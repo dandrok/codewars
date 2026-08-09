@@ -58,5 +58,7 @@ function heightChecker(heights: number[]): number {
         }
     }
     return result
-
+    // there is place for improvement
+    // we can definitely get rid of .sort() method
+    // counting sort may be way better solution with O(n) time complexity
 };
