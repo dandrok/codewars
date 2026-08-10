@@ -62,3 +62,9 @@ function heightChecker(heights: number[]): number {
     // we can definitely get rid of .sort() method
     // counting sort may be way better solution with O(n) time complexity
 };
+
+
+function heightChecker(heights: number[]): number {
+ const counts = new Array(101).fill(0);
+    // next: loop through heights, increment counts[height] for each one
+}
