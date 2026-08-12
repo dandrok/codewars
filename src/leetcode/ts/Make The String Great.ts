@@ -40,7 +40,7 @@
 //     s contains only lower and upper case English letters.
 //
 //
-// naive solution 
+// naive solution O(n²)
 function makeGood(s: string): string {
     let changed = true;
 
