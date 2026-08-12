@@ -40,6 +40,25 @@
 //     s contains only lower and upper case English letters.
 //
 //
-//
+// naive solution 
 function makeGood(s: string): string {
-};
+    let changed = true;
+
+    while (changed) {
+        changed = false;
+
+        for (let i = 0; i < s.length - 1; i++) {
+            const a = s[i];
+            const b = s[i + 1];
+
+            // same letter, different case
+            if (a !== b && a.toLowerCase() === b.toLowerCase()) {
+                s = s.slice(0, i) + s.slice(i + 2);
+                changed = true;
+                break; // restart scanning from the beginning
+            }
+        }
+    }
+
+    return s;
+}
