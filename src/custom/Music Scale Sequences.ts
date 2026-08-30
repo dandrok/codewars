@@ -30,3 +30,5 @@
 // Wait — check transition 2→1 here... actually let's check the sum first: 1+2+1+2+3 = 9, not 12 ✗ (also has an illegal 2→1... no wait, 2→1 IS legal. So this one's only invalid because of the sum, good example of "transitions fine, sum wrong")
 //
 //
+//
+//
