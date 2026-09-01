@@ -31,4 +31,14 @@
 //
 //
 //
-//
+//target may be 12 for example
+function generateSequences(target: number): number[][] {
+  const results: number[][] = [];
+  
+  function backtrack(currentSequence: number[], currentSum: number) {
+    // TODO: base cases and recursive exploration go here
+  }
+  
+  backtrack([], 0);
+  return results;
+}
