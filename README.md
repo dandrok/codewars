@@ -6,3 +6,4 @@ My answers are sometimes not the most beautiful (optimize), but they will certai
 Enjoy and have fun :)
 
 [![Codewars Badge](https://www.codewars.com/users/dandrok/badges/small)](https://www.codewars.com/users/dandrok)
+
