@@ -31,4 +31,30 @@ const copyFiles = async (
   }
 };
 
+// More efficient approche wiht Set
+
+const copyFiles = async (
+  fromDir: string,
+  targetDir: string,
+  files: string[],
+) => {
+  try {
+    const dir = await opendir(fromDir);
+    const setFiles = new Set(files);
+    for await (const dirent of dir) {
+      // match multiple file extensions
+      const fileName = dirent.name.split(".").at(0);
+      if (dirent.isFile() && setFiles.has(fileName)) {
+        // copyFile is a node:fs API function
+        await copyFile(
+          `${dirent.parentPath}/${dirent.name}`,
+          `${targetDir}/${dirent.name}`,
+        );
+      }
+    }
+  } catch (error) {
+    console.error("Failed to copy files: ", error);
+  }
+};
+
 copyFiles("./test", "./past", files);
