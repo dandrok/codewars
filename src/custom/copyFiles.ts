@@ -8,8 +8,11 @@
 // - Properly catch and handle file system errors.
 // - Support Node 20.1.0+
 import { copyFile, opendir } from "node:fs/promises";
+import { join } from "node:path";
 
-const files = ["3.js", "4.js", "6.js"];
+const ALLOWED_EXTENSIONS = new Set(["jpg", "jpeg", "raw"]);
+
+const files = ["3", "4", "6"];
 
 const copyFiles = async (
   fromDir: string,
@@ -38,22 +41,24 @@ const copyFiles = async (
   targetDir: string,
   files: string[],
 ) => {
-  try {
-    const dir = await opendir(fromDir);
-    const setFiles = new Set(files);
-    for await (const dirent of dir) {
-      // match multiple file extensions
-      const fileName = dirent.name.split(".").at(0);
-      if (dirent.isFile() && setFiles.has(fileName)) {
-        // copyFile is a node:fs API function
-        await copyFile(
-          `${dirent.parentPath}/${dirent.name}`,
-          `${targetDir}/${dirent.name}`,
-        );
-      }
+  const setFiles = new Set(files);
+  const dir = await opendir(fromDir);
+
+  for await (const dirent of dir) {
+    if (!dirent.isFile()) continue;
+
+    const parts = dirent.name.split(".");
+    if (parts.length !== 2) continue;
+
+    const [name, ext] = parts;
+    if (!setFiles.has(name)) continue;
+    if (!ALLOWED_EXTENSIONS.has(ext.toLowerCase())) continue;
+
+    try {
+      await copyFile(join(fromDir, dirent.name), join(targetDir, dirent.name));
+    } catch (error) {
+      console.error("Failed to copy file:", dirent.name, error);
     }
-  } catch (error) {
-    console.error("Failed to copy files: ", error);
   }
 };
 
