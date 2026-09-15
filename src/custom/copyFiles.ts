@@ -43,6 +43,7 @@ const copyFiles = async (
 ) => {
   const setFiles = new Set(files);
   const dir = await opendir(fromDir);
+  const matches: string[] = [];
 
   for await (const dirent of dir) {
     if (!dirent.isFile()) continue;
@@ -54,12 +55,19 @@ const copyFiles = async (
     if (!setFiles.has(name)) continue;
     if (!ALLOWED_EXTENSIONS.has(ext.toLowerCase())) continue;
 
-    try {
-      await copyFile(join(fromDir, dirent.name), join(targetDir, dirent.name));
-    } catch (error) {
-      console.error("Failed to copy file:", dirent.name, error);
-    }
+    matches.push(dirent.name);
   }
-};
 
+  const results = await Promise.allSettled(
+    matches.map((fileName) =>
+      copyFile(join(fromDir, fileName), join(targetDir, fileName)),
+    ),
+  );
+
+  results.forEach((res, i) => {
+    if (res.status === "rejected") {
+      console.error("Failed to copy file:", matches[i], res.reason);
+    }
+  });
+};
 copyFiles("./test", "./past", files);
