@@ -23,7 +23,17 @@ Also check out my other creations — Naming Files, Elections: Weighted Average,
 If you notice any issues or have any suggestions/comments whatsoever, please don't hesitate to mark an issue or just comment. Thanks!
 */
 
+// curr solution time complexity equal O(n log n) becouse of .sort method is expensive
 function keepOrder(ary, val) {
-  return [...ary, val].sort((a,b) => a-b).indexOf(val)
+  return [...ary, val].sort((a, b) => a - b).indexOf(val);
 }
 
+// better approche - time complexity equal O(n) becouse we iterate over ary max n times at worst
+// space complexity is O(n) becouse we only increament one i value.
+const keepOrder = (ary, val) => {
+  let i = 0;
+  while (ary[i] < val) {
+    i++;
+  }
+  return i;
+};
