@@ -29,7 +29,7 @@ function keepOrder(ary, val) {
 }
 
 // better approche - time complexity equal O(n) becouse we iterate over ary max n times at worst
-// space complexity is O(n) becouse we only increament one i value.
+// space complexity is O(1) becouse we only increament one i value.
 const keepOrder = (ary, val) => {
   let i = 0;
   while (ary[i] < val) {
