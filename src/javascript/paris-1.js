@@ -37,3 +37,5 @@ const keepOrder = (ary, val) => {
   }
   return i;
 };
+
+// binary search may be the best solution for that one O(log n)
