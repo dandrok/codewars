@@ -20,9 +20,26 @@ Examples
 * Input: [2,2,1,2,1], output = [2,2,2,1]
 
 */
+
+// overall solid solution O(n) time and space complexity
 function removeSmallest(numbers) {
-  const copy = numbers.slice(0)
- let smallestValue = numbers.indexOf(Math.min(...numbers))
- copy.splice(smallestValue, 1);
- return copy
+  const copy = numbers.slice(0);
+  let smallestValue = numbers.indexOf(Math.min(...numbers));
+  copy.splice(smallestValue, 1);
+  return copy;
+}
+
+// similar time and space complexity O(n) but fewer operations
+const removeSmallest = (numbers) => {
+  const copy = numbers.slice(0);
+  let minVal = numbers[0];
+  let minValIndex = 0;
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] < minVal) {
+      minVal = numbers[i];
+      minValIndex = i;
+    }
   }
+  copy.slice(minValIndex, 1);
+  return minVal;
+};
