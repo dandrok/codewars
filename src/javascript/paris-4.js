@@ -13,10 +13,14 @@ Complete the function initials.
 
 Names are separated by exactly one space in the input, without leading or trailing spaces. Names will always be lowercase, except optionally their first letter.
 */
-function initials(n){
-  const arr = n.split(" ")
-return arr.map((el, i) => {
-const first = el.at(0).toUpperCase()
-return arr[i+1] ? first: first + el.slice(1)
-}).join(".")
+
+// I think there is a way to impprovement here
+function initials(n) {
+  const arr = n.split(" ");
+  return arr
+    .map((el, i) => {
+      const first = el.at(0).toUpperCase();
+      return arr[i + 1] ? first : first + el.slice(1);
+    })
+    .join(".");
 }
