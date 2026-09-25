@@ -27,4 +27,4 @@ Examples
  */
 
 const makeBackronym = (string) =>
-  [...string.toUpperCase()].map((letter) => dict[letter]).join(' ')
+  [...string.toUpperCase()].map((letter) => dict[letter]).join(" ");
